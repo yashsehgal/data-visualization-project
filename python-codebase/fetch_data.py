@@ -13,3 +13,29 @@
 # ? Manage all the methods and review every feature after performance testing.
 # ? Optimise all the features and methods throughout the time of development.
 
+# ! Python Package is not available rightnow
+# ! CMakeFile.cmake is currently not generated for this project.
+
+import pandas as pandas
+
+
+'''
+  Creating a class method to manage all the methods
+  and features of the codebase module. This class contains all the methods
+  and functions for data featching and using.
+'''
+
+class FetchData:
+  def __init__(self, data_type):
+    self.data_type = data_type
+    self.check_datafile_type()
+
+  def check_datafile_type(self):
+    datatype = self.data_type
+    # continue from the datatype method
+  
+  def fetch_data_from_file(self):
+    # opening the csv file to fetch data
+    datafile = pandas.read_csv("datasets/dataset.csv")
+    
+    
