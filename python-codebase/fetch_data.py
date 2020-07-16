@@ -71,4 +71,98 @@ class FetchData:
     self.number_of_student_not_placed = len(datafile[datafile.status == "Not Placed"])
     self.salary_index = datafile[datafile.salary]
     
-    
+  '''
+    Now as the datafile is fetched with various methods
+    we need getters for every function method which can be used later
+    by other modules.
+  '''
+  
+  def get_serial_numbers(self):
+    return self.serial_number
+  
+  def get_gender_list(self):
+    return self.gender_list
+  
+  def get_number_of_males(self):
+    return self.number_of_males
+  
+  def get_number_of_females(self):
+    return self.number_of_females
+  
+  def get_secondary_school_percentage_list(self):
+    return self.secondary_school_percentage
+  
+  def get_number_of_central_board_in_secondary_school(self):
+    return self.number_of_central_board_secondary
+  
+  def get_number_of_other_boards_in_secondary_school(self):
+    return self.number_of_other_board_secondary
+  
+  def get_high_school_percentage_list(self):
+    return self.high_school_percentage
+  
+  def get_number_of_central_board_in_high_school(self):
+    return self.number_of_central_board_high
+  
+  def get_number_of_other_boards_in_high_school(self):
+    return self.number_of_other_board_high
+  
+  def get_high_school_subjects(self):
+    return self.high_school_subjects
+  
+  def get_number_of_arts_in_high_school(self):
+    return self.high_school_arts
+  
+  def get_number_of_commerce_in_high_school(self):
+    return self.high_school_commerce
+  
+  def get_number_of_science_in_high_school(self):
+    return self.high_school_science
+  
+  def get_college_degree_list(self):
+    return self.college_degree
+  
+  def get_number_of_commerce_management_degree(self):
+    return self.number_of_commerce_management_degree
+  
+  def get_number_of_science_tech_degree(self):
+    return self.number_of_science_tech_degree
+  
+  def get_number_of_other_degree(self):
+    return self.number_of_other_degree
+  
+  def get_college_marks_list(self):
+    return self.college_marks
+  
+  def get_work_experience_list(self):
+    return self.work_experience
+  
+  def get_number_of_no_work_experience(self):
+    return self.number_of_no_workexp
+  
+  def get_number_of_yes_work_experience(self):
+    return self.number_of_yes_workexp
+  
+  def get_students_specialization_list(self):
+    return self.students_specialization
+  
+  def get_students_spec_in_mkt_hr(self):
+    return self.number_of_mkt_hr_spec
+  
+  def get_students_spec_in_mkt_fin(self):
+    return self.number_of_mkt_fin_spec
+  
+  def get_mba_percentage_list(self):
+    return self.mba_percentage
+  
+  def get_student_placement_status_list(self):
+    return self.student_placement_status
+  
+  def get_number_of_placed_students(self):
+    return self.number_of_student_placed
+  
+  def get_number_of_non_placed_students(self):
+    return self.number_of_student_not_placed
+  
+  def get_salary_index_list(self):
+    return self.salary_index
