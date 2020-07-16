@@ -11,9 +11,16 @@
   # ? To manage all the methods and functions for graphs and value handlers
 '''
 
-class GenederWisePlacementAnalysis:
+from python_codebase.fetch_data import FetchData 
+
+class GenderWisePlacementAnalysis:
   def __init__(self, activation = False):
     self.activation = activation
     
   def generateGraph(self):
-     
+     fetchDataObject = FetchData(True)
+     print(fetchDataObject.get_gender_list())
+  
+if __name__ == "__main__":
+    genderWisePlacementAnalysis = GenderWisePlacementAnalysis(True)
+    genderWisePlacementAnalysis.generateGraph()

@@ -26,12 +26,13 @@ import pandas as pandas
 '''
 
 class FetchData:
-  def __init__(self, data_type):
-    self.data_type = data_type
+  def __init__(self, activation = False):
+    self.activation = activation
     self.check_datafile_type()
 
   def check_datafile_type(self):
-    datatype = self.data_type
+    pass
+    # datatype = self.data_type
     # continue from the datatype method
   
   def fetch_data_from_file(self):
