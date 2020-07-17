@@ -11,7 +11,7 @@
   # ? To manage all the methods and functions for graphs and value handlers
 '''
 
-from python_codebase.fetch_data import FetchData 
+from python_codebase.fetch_data import FetchData as FetchData
 from matplotlib import pyplot as plt
 
 class GenderWisePlacementAnalysis:
