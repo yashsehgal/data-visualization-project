@@ -29,13 +29,26 @@ class GenderWisePlacementAnalysis:
     females = []
     
     for i in range(len(gender_list)):
-      if (gender_list[i] == 'M'):
-        males.append(gender_list[i])
-      else:
-        females.append(gender_list[i])
-        
-    plt.plot(males)
-    plt.plot(females)
+      if (gender_list[i] == 'M'): males.append(gender_list[i])
+      else: females.append(gender_list[i])
+    
+    male_placement = 0
+    female_placement = 0
+    
+    for count in range(len(placement_status_list)):
+      if (gender_list[count] == 'M'): male_placement += 1
+      else: female_placement += 1
+    
+    male_value = fetchDataObject.get_number_of_males()
+    female_value = fetchDataObject.get_number_of_females()
+    
+    # plt.scatter(male_value)
+    # plt.scatter(female_value)
+    plt.scatter(male_placement, len(placement_status_list))
+    plt.scatter(female_placement, len(placement_status_list))
+    # plt.plot(male_placement)
+    # plt.plot(female_placement)
+    
     plt.show()
     
   
