@@ -52,6 +52,6 @@ class GenderWisePlacementAnalysis:
     plt.show()
     
   
-if __name__ == "__main__":
-    genderWisePlacementAnalysis = GenderWisePlacementAnalysis(True)
-    genderWisePlacementAnalysis.generateGraph()
+# if __name__ == "__main__":
+#     genderWisePlacementAnalysis = GenderWisePlacementAnalysis(True)
+#     genderWisePlacementAnalysis.generateGraph()
