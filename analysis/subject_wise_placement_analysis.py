@@ -24,6 +24,43 @@ class SubjectWisePlacementAnalysis:
     
     subject_list = fetchData.get_high_school_objects()
     print(subject_list)
+    placement_status_list = fetchData.get_student_placement_list()
+    science_students = []
+    commerce_students = []
+    arts_students = []
+    
+    for count in range(len(subject_list)):
+      if subject_list[count] == 'Science': science_students.append(subject_list[count])
+      elif subject_list[count] == "Commerce": commerce_students.append(subject_list[count])
+      elif subject_list[count] == "Arts": arts_students.append(subject_list[count])
+      else: continue
+    
+    # subject wise placed students
+    science_placed = 0
+    commerce_placed = 0
+    arts_placed = 0
+    
+    # subject wise not-placed students
+    science_not_placed = 0
+    commerce_not_placed = 0
+    arts_not_placed = 0
+    
+    # computing number of placed students - subject wise
+    for count in range(len(placement_status_list)):
+      if placement_status_list[count] == "Placed" and "Placed" in placement_status_list[count]:
+        if subject_list[count] == "Science" and "Science" in subject_list[count]:
+          science_placed += 1
+        elif subject_list[count] == "Commerce" and "Commerce" in subject_list[count]:
+          commerce_placed += 1
+        elif subject_list[count] == "Arts" and "Arts" in subject_list[count]:
+          arts_placed += 1
+      elif placement_status_list[count] == "Not Placed" and "Not Placed" in placement_status_list[count]:
+        if subject_list[count] == "Science" and "Science" in subject_list[count]:
+          science_not_placed += 1
+        elif subject_list[count] == "Commerce" and "Commerce" in subject_list[count]:
+          commerce_not_placed += 1
+        elif subject_list[count] == "Arts" and "Arts" in subject_list[count]:
+          arts_not_placed += 1
     
     # plt.plot()
   
