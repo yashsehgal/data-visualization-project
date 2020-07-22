@@ -11,7 +11,7 @@
   # ? To manage all the methods and functions for graphs and value handlers
 '''
 
-from python_codebase.fetch_data import FetchData as FetchData
+from codebase import FetchData as FetchData
 from matplotlib import pyplot as plt
 
 class GenderWisePlacementAnalysis:
@@ -19,7 +19,7 @@ class GenderWisePlacementAnalysis:
     self.activation = activation
     
   def generateGraph(self):
-    fetchDataObject = FetchData(True)
+    fetchDataObject = FetchData.FetchData(True)
     #  print(fetchDataObject.get_gender_list())
     #  print(fetchDataObject.get_student_placement_status_list())
     

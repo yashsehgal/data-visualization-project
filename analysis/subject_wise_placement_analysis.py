@@ -10,7 +10,7 @@
   # ? To manage all the methods and functions for graphs and value handlers
 '''
 
-from python_codebase.fetch_data import FetchData as FetchData
+from codebase import fetch_data as FetchData
 from matplotlib import pyplot as plt
 
 class SubjectWisePlacementAnalysis:
@@ -20,7 +20,7 @@ class SubjectWisePlacementAnalysis:
   def generateGraph(self):
     # activation of the fetchData object which will inherit the properties 
     # FetchData class method
-    fetchData = FetchData(True)
+    fetchData = FetchData.FetchData(True)
     
     subject_list = fetchData.get_high_school_objects()
     print(subject_list)
@@ -61,6 +61,12 @@ class SubjectWisePlacementAnalysis:
           commerce_not_placed += 1
         elif subject_list[count] == "Arts" and "Arts" in subject_list[count]:
           arts_not_placed += 1
+          
+    plt.plot(science_students)
+    plt.plot(commerce_students)
+    plt.plot(arts_students)
+    plt.title("Subject wise Index")
+    plt.show()
     
     # plt.plot()
   
