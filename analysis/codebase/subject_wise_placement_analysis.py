@@ -10,7 +10,7 @@
   # ? To manage all the methods and functions for graphs and value handlers
 '''
 
-from codebase import fetch_data as FetchData
+from analysis.codebase.fetch_data import FetchData as FetchData
 from matplotlib import pyplot as plt
 
 class SubjectWisePlacementAnalysis:
