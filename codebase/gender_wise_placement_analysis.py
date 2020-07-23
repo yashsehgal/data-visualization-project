@@ -12,7 +12,7 @@
 '''
 
 # from codebase import FetchData as FetchData
-from analysis.python_codebase.fetch_data import FetchData as FetchData
+from fetch_data import FetchData as FetchData
 from matplotlib import pyplot as plt
 
 class GenderWisePlacementAnalysis:
